@@ -12,6 +12,10 @@
     {
       "source": "/v1/audio/speech",
       "destination": "/api/speech.js"
+    },
+    {
+      "source": "/v1/models",
+      "destination": "/api/models.js"
     }
   ],
   "headers": [
