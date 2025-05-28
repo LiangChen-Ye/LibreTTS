@@ -48,25 +48,7 @@ try {
   
   // 根据OpenAI模型映射到Microsoft声音
   // 默认使用英文声音，如果是中文内容则使用中文声音
-  let voiceName;
-  const containsChinese = /[\u4e00-\u9fa5]/.test(text);
-  
-  if (body.voice === "alloy") {
-    voiceName = containsChinese ? "zh-CN-XiaoxiaoNeural" : "en-US-JennyNeural";
-  } else if (body.voice === "echo") {
-    voiceName = containsChinese ? "zh-CN-YunxiNeural" : "en-US-GuyNeural";
-  } else if (body.voice === "fable") {
-    voiceName = containsChinese ? "zh-CN-XiaochenNeural" : "en-US-AriaNeural";
-  } else if (body.voice === "onyx") {
-    voiceName = containsChinese ? "zh-CN-YunyangNeural" : "en-US-ChristopherNeural";
-  } else if (body.voice === "nova") {
-    voiceName = containsChinese ? "zh-CN-XiaohanNeural" : "en-US-SaraNeural";
-  } else if (body.voice === "shimmer") {
-    voiceName = containsChinese ? "zh-CN-XiaoyiNeural" : "en-US-JennyMultilingualNeural";
-  } else {
-    // 默认声音
-    voiceName = containsChinese ? "zh-CN-XiaoxiaoMultilingualNeural" : "en-US-JennyMultilingualNeural";
-  }
+  let voiceName = "zh-CN-XiaoxiaoNeural";
   
   // 处理速度参数 (OpenAI: 0.25-4.0)
   let rate = 0; // 默认速度
