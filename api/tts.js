@@ -43,7 +43,7 @@ export default async function handler(req, res) {
   }
 }
 
-async function handleTTS(res, text, voiceName, rate, pitch, outputFormat, download) {
+export async function handleTTS(res, text, voiceName, rate, pitch, outputFormat, download) {
   try {
     await refreshEndpoint();
     
